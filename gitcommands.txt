@@ -1,0 +1,28 @@
+    1  cd ..
+    2  git init
+    3  echo "# Ruby_AbridgeSolutions" >> README.md
+    4  git init
+    5  git add README.md
+    6  git commit -m "first commit"
+    7  git config --global user.email "shivak981@gmail.com"
+    8  git config --global user.name "shiva"
+    9  git commit -m "first commit"
+   10  git remote add origin https://github.com/spasham/Ruby_AbridgeSolutions.git
+   11  git push -u origin master
+   12  ls
+   13  cd Ruby_Learn/
+   14  git add .
+   15  git commit -m "commited all the exersice files"
+   16  git status
+   17  git push
+   18  git status
+   19  ls
+   20  cd ..
+   21  ls
+   22  rm -rf desktop.ini 
+   23  clear
+   24  ls
+   25  git status
+   26  history 
+   27  ls
+   28  history > gitcommands.txt
