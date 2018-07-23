@@ -1,36 +1,21 @@
-filename = ARGV.first
+from_file, to_file = ARGV
 
-puts "We're going to erase #{filename}"
-puts "if you don't want that, hit CTRL-C (^c)"
+puts "Copying from #{from_file} to #{to_file}"
 
-puts "if you do want that, hit RETURN"
+# we could do these two on one line, how?
+in_file = open(from_file)
+indata = in_file.read
 
+puts "The input file is #{indata.length} bytes long"
+
+puts "Does the output file exist? #{File.exist?(to_file)}"
+puts "Ready, hit RETURN to continue, CTRL-C to abort."
 $stdin.gets
 
-puts "opening the file.."
-target = open(filename, 'w')
+out_file = open(to_file, 'w')
+out_file.write(indata)
 
+puts "Alright, all done."
 
-puts "Truncating the file, Goodbye..!"
-target.truncate(0)
-
-
-puts "now I am going to ask you for three lines"
-
-print "line 1: "
-line1 = $stdin.gets.chomp
-print "line 2: "
-line2 = $stdin.gets.chomp
-print "line 3: "
-line3 = $stdin.gets.chomp
-
-
-puts "I am going to write these to the file"
-
-target.write(line1)
-target.write("\n")
-target.write(line2)
-target.write("\n")
-target.write(line3)
-target.write("\n")
-
+out_file.close
+in_file.close

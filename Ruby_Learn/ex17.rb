@@ -1,33 +1,38 @@
-input_file = ARGV.first
-
-def print_all(f)
-    puts f.read
-end
-
-def rewind(f)
-    f.seek(0)
-end
-
-def print_a_line(line_count, f)
-    puts "#{line_count}, #{f.gets.chomp}"
-end
-
-current_file = open(input_file)
-
-puts "First let's print the whole file:\n"
-
-print_all(current_file)
-puts "now let's rewind, kind of like a tape"
-
-rewind(current_file)
-
-puts "let's print three lines:"
-
-current_line = 1
-print_a_line(current_line, current_file)
-
-current_line = current_line + 1
-print_a_line(current_line, current_file)
-
-current_line = current_line + 1
-print_a_line(current_line, current_file)
+def add(a, b)
+    puts "ADDING #{a} + #{b}"
+    return a + b
+  end
+  
+  def subtract(a, b)
+    puts "SUBTRACTING #{a} - #{b}"
+    return a - b
+  end
+  
+  def multiply(a, b)
+    puts "MULTIPLYING #{a} * #{b}"
+    return a * b
+  end
+  
+  def divide(a, b)
+    puts "DIVIDING #{a} / #{b}"
+    return a / b
+  end
+  
+  
+  puts "Let's do some math with just functions!"
+  
+  age = add(30, 5)
+  height = subtract(78, 4)
+  weight = multiply(90, 2)
+  iq = divide(100, 2)
+  
+  puts "Age: #{age}, Height: #{height}, Weight: #{weight}, IQ: #{iq}"
+  
+  
+  # A puzzle for the extra credit, type it in anyway.
+  puts "Here is a puzzle."
+  
+  what = add(age, subtract(height, multiply(weight, divide(iq, 2))))
+  
+  puts "That becomes: #{what}. Can you do it by hand?"
+  

@@ -1,29 +1,36 @@
-def add(a,b)
-    puts "ADDING #{a} + #{b}"
-    return a + b
+people = 20
+cats = 30
+dogs = 15
+
+
+if people < cats
+  puts "Too many cats! The world is doomed!"
 end
 
-def substract(a,b)
-    puts "SUBSTRACT #{a} - #{b}"
-    return a - b
+if people > cats
+  puts "Not many cats! The world is saved!"
 end
 
-def multiply(a,b)
-    puts "MULTIPLY #{a} * #{b}"
-    return a * b
+if people < dogs
+  puts "The world is drooled on!"
 end
 
-def divide(a,b)
-    puts "DIVIDE #{a} / #{b}"
-    return a / b
+if people > dogs
+  puts "The world is dry!"
 end
 
-puts "Let's do some math with just functions!"
+
+dogs += 5
+
+if people >= dogs
+  puts "People are greater than or equal to dogs."
+end
+
+if people <= dogs
+  puts "People are less than or equal to dogs."
+end
 
 
-age = add(30,5)
-height = substract(78, 4)
-weight = multiply(90, 2)
-iq = divide(100, 2)
-
-puts "Age: #{age}, Height: #{height}, Weight: #{weight} and iq: #{iq}"
+if people == dogs
+  puts "People are dogs."
+end

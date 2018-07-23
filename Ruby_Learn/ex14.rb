@@ -1,23 +1,27 @@
-from_file, to_file = ARGV
-
-puts "Copying from #{from_file} to #{to_file}"
-
-#we could do these two on one line, how?
-
-in_file = open(from_file)
-indata = in_file.read
-
-puts "The input file is #{indata.length} bytes long"
-
-puts "Does the output file exist? #{File.exist?(to_file)}"
-puts "Ready, hit Return to continue, CTRL-C to abort."
-$stdin.gets
-
-
-out_file = open(to_file, 'w')
-out_file.write(indata)
-
-puts "Alright, we are done"
-
-out_file.close
-in_file.close
+# this one is like your scripts with ARGV
+def print_two(*args)
+    arg1, arg2 = args
+    puts "arg1: #{arg1}, arg2: #{arg2}"
+  end
+  
+  # ok, that *args is actually pointless, we can just do this
+  def print_two_again(arg1, arg2)
+    puts "arg1: #{arg1}, arg2: #{arg2}"
+  end
+  
+  # this just takes one argument
+  def print_one(arg1)
+    puts "arg1: #{arg1}"
+  end
+  
+  # this one takes no arguments
+  def print_none()
+    puts "I got nothin'."
+  end
+  
+  
+  print_two("Zed","Shaw")
+  print_two_again("Zed","Shaw")
+  print_one("First!")
+  print_none()
+  

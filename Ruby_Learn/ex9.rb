@@ -1,13 +1,5 @@
-print "Give me a number:"
-number = gets.chomp.to_f
+first, second, third = ARGV
 
-bigger = number * 100
-puts "A bigger number is #{bigger}"
-
-print "Give me another number:"
-another = gets.chomp
-number = another.to_f
-
-
-smaller = number / 100
-puts "A smaller number is #{smaller}"
+puts "Your first variable is: #{first}"
+puts "Your second variable is: #{second}"
+puts "Your third variable is: #{third}"
